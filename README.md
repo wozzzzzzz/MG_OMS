@@ -1,71 +1,40 @@
-# Getting Started with Create React App
+### ***주문 목록 섹션***
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- **`금일 주문 목록`** : 메인 화면 상단에 벤또그리드를 활용하여 금일 주문 목록 시간대별로 정렬
+- **`주문 정보**` : 주문 번호, 고객 이름, 전화번호, 주문 시간, 결제 상태, 떡 종류 등 주요 정보가 한눈에 들어오도록
+- **`주문 상태 필터`** :  처리완료, 대기중, 결제 상태 등에 따른 필터링 제공
+- **`주문 추가/ 수정 버튼`** : 각 주문 항목에 따라 주문 수정이 가능한 버튼 제공
 
-## Available Scripts
+### *떡피 정보 섹션*
 
-In the project directory, you can run:
+- `필요 떡피 계산기` : 선택 날짜의 주문 기준으로 떡 종류 별로 필요한 흰피, 쑥피 총량 계산
+- `당일 주문에 따른 피계산` : 당일에 필요 떡피 수량 자동으로 산출 / 요약
+- `실제 떡피 준비량 입력` : 실제로 준비한 떡피 양을 입력할 수 있는 입력창
+- `남은 떡피 계산` : 주문 처리시 실제 사용된 떡피 수량에 따라 남은 떡피를 계산 후 업데이트
+- `경고 표시` : 떡피 부족할 경우 시각적으로 경고
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# MG_OMS
+```jsx
+**src/**
+│
+├── **components/**        # UI 컴포넌트 모음
+│   ├── OrderList.js   # 금일 주문 목록을 보여주는 컴포넌트
+│   ├── OrderItem.js   # 개별 주문 항목을 표시하는 컴포넌트
+│   ├── OrderForm.js   # 주문 추가/수정 폼 컴포넌트
+│   ├── FilterBar.js   # 주문 상태 필터링을 위한 컴포넌트
+│   ├── 떡피Calculator.js  # 떡피 계산 및 입력 기능을 위한 컴포넌트
+│   ├── 떡피Summary.js     # 떡피 요약 정보 및 남은 떡피 정보 제공 컴포넌트
+│   └── WarningMessage.js  # 떡피 부족 경고를 표시하는 컴포넌트
+│
+├── **pages/**             # 각 화면별 페이지 모음
+│   ├── MainPage.js    # 메인 화면: 주문 목록 및 떡피 정보를 통합하여 보여줌
+│   └── CustomerDetail.js # 고객 정보 및 과거 주문 조회 화면
+│
+├── **services/**          # Firebase 관련 로직 및 API 호출
+│   ├── firebaseConfig.js # Firebase 초기화 및 설정
+│   └── orderService.js   # 주문 관련 Firestore 쿼리 및 비즈니스 로직 처리
+│
+├── **styles/**            # 스타일 파일 모음
+│   └── main.css       # 전체 스타일 파일
+│
+└── **App.js**             # 전체 앱 구조를 구성하는 메인 컴포넌트
+```

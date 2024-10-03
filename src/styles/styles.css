@@ -1,10 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .app {
     display: flex;
+
   }
   
   .main-content {
-    margin-left: 250px;
-    padding: 20px;
+    margin-left: 80px;
     width: calc(100% - 250px);
   }
   

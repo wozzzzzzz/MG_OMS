@@ -11,7 +11,7 @@ function Sidebar() {
 
   const sidebarStyle = {
     width: isExpanded ? '220px' : '72px',
-    height: '1080px',
+    height: '100vh',
     backgroundColor: '#333',
     padding: isExpanded ? '36px 18px' : '36px 18px 729px 18px',
     display: 'flex',

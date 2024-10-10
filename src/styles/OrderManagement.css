@@ -1,0 +1,96 @@
+.div_sticky_104 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  padding: 34px 80px;
+}
+
+.div_sticky_h1{
+  color: #2D2E30;
+  font-family: Pretendard;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 142.9%;
+  letter-spacing: -0.8px;
+  margin-bottom: 0;
+
+}
+
+.Frame72{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+
+.date-picker-container {
+  display: flex;
+  height: 46px;
+  padding: 13.731px 16.154px;
+  gap: 5.385px;
+}
+
+.div_flexGap_16{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+
+
+.btn-add-order {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.time-group {
+  margin-bottom: 40px;
+}
+
+.time-group-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #4a4a4a;
+}
+
+.orders-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.order-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 250px;
+}
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.order-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}

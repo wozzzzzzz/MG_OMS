@@ -4,20 +4,22 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none; /* 스크롤 바운스 효과 비활성화 */
+}
+
 .app {
     display: flex;
 
   }
   
   .main-content {
-    margin-left: 80px;
-    width: calc(100% - 250px);
+    width: calc(100%);
   }
   
-  h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
+
   
   button {
     padding: 10px 20px;

@@ -11,10 +11,16 @@ function OrderModal({ show, onClose, selectedDate, order, isEdit }) {
   const [paymentStatus, setPaymentStatus] = useState(order ? order.paymentStatus : '미결제');
   const [time, setTime] = useState(order ? { hour: order.time.split(':')[0], minute: order.time.split(':')[1] } : { hour: '10', minute: '00' });
   const [status, setStatus] = useState(order ? order.status : '준비중');
+  const [note, setNote] = useState(order ? order.note : '');
 
   const menuOptions = [
-    "망개떡세트(S)", "망개떡세트(M)", "망개떡세트(L)", 
-    "종합세트(M)", "종합세트(L)", "떡 케이크(S)",
+    "망개떡세트 S", "망개떡세트 M", "망개떡세트 L", 
+    "망굴세트 S", "망굴세트 M", "망굴세트 L", 
+    "종합세트 M", "종합세트 L", 
+    "함지선물세트 S", "함지선물세트 M", "함지선물세트 L", 
+    "떡 케이크 S", "떡 케이크 M", "떡 케이크 L", 
+    "연잎밥", "전통식혜 500ml", "전통식혜 1L", 
+    "단호박식혜 500ml", "단호박식혜 1L"
   ];
 
   const handleSaveOrder = async () => {
@@ -27,15 +33,13 @@ function OrderModal({ show, onClose, selectedDate, order, isEdit }) {
 
     try {
       if (isEdit) {
-        // 기존 주문 수정
         const orderRef = doc(db, 'orders', selectedDateString, 'orderList', order.id);
         await updateDoc(orderRef, {
-          name, phone, items: formattedItems, serviceType, paymentStatus, time: `${time.hour}:${time.minute}`, status
+          name, phone, items: formattedItems, serviceType, paymentStatus, time: `${time.hour}:${time.minute}`, status, note
         });
       } else {
-        // 새로운 주문 추가
         await addDoc(collection(db, 'orders', selectedDateString, 'orderList'), {
-          name, phone, items: formattedItems, serviceType, paymentStatus, time: `${time.hour}:${time.minute}`, status, date: selectedDateString
+          name, phone, items: formattedItems, serviceType, paymentStatus, time: `${time.hour}:${time.minute}`, status, note, date: selectedDateString
         });
       }
       onClose();
@@ -60,11 +64,12 @@ function OrderModal({ show, onClose, selectedDate, order, isEdit }) {
   };
 
   return (
-    <Modal show={show} onHide={onClose} dialogClassName="modal-bottom">
+    <Modal show={show} onHide={onClose} centered backdrop="static" keyboard={false}>
       <Modal.Header closeButton>
-        <Modal.Title>{isEdit ? "주문 수정" : "주문 추가"}</Modal.Title>
+        <Modal.Title>{isEdit ? "주문 수정하기" : "새 주문 추가하기"}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
+        <p className="custom-subtitle">주문자 이름과 전화번호는 꼭 남겨주세요!</p>
         <Form>
           {/* 이름 필드 */}
           <Form.Group controlId="formName">
@@ -182,6 +187,19 @@ function OrderModal({ show, onClose, selectedDate, order, isEdit }) {
               <option value="취소">취소</option>
             </Form.Control>
           </Form.Group>
+
+          {/* 기타 사항 필드 */}
+          <Form.Group controlId="formNote">
+            <Form.Label>기타 추가사항</Form.Label>
+            <Form.Control
+              as="textarea"
+              rows={3}
+              placeholder="기타 사항을 입력하세요"
+              value={note}
+              onChange={(e) => setNote(e.target.value)}
+            />
+          </Form.Group>
+
         </Form>
       </Modal.Body>
       <Modal.Footer>

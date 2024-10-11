@@ -1,0 +1,123 @@
+.orderItemContainer {
+    background-color: #ffffff;
+    border: 1px solid #00000033;
+    border-radius: 21.41px;
+    padding: 24.3px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 410px;
+}
+
+.orderTitleSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.orderTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2D2E30;
+    font-family: "Pretendard", sans-serif;  /* 프리텐다드 적용 */
+}
+
+.orderOptionsButton {
+    width: 29px;
+    height: 29px;
+}
+
+.orderStatusButtonsContainer {
+    display: flex;
+    gap: 10px;
+    margin-top: 19.41px;
+}
+
+.orderStatusButton {
+    padding: 4.291px 8.581px;
+    border-radius: 12px;
+    background-color: #4e596829;
+    color: #4E5968;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+    font-family: "Pretendard", sans-serif;  /* 프리텐다드 적용 */
+}
+
+.orderDetailsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 19.41px;
+}
+
+.order-item {
+    font-family: "Pretendard", sans-serif;  /* 프리텐다드 적용 */
+    display: inline-flex;
+    align-items: center;
+    gap: 6.65px;
+    justify-content: space-between;
+    width: fit-content; /* 텍스트 크기만큼만 박스 크기를 설정 */
+    border: 1px solid #D2D3D7;
+    border-radius: 8px;
+    padding: 16.96px 19.95px;
+}
+
+.order-item span {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+.orderNoteText {
+    background-color: #FAFAFB;
+    padding: 10px;
+    border: 1px solid #D2D3D7;
+    border-radius: 8px;
+    color: #B7B9C0;
+    font-size: 14px;
+    font-family: "Pretendard", sans-serif;  /* 프리텐다드 적용 */
+    margin-top: 19.41px;
+}
+
+.SectionDivider {
+    height: 1px;
+    background-color: #D2D3D7;
+    margin: 20px 0;
+}
+
+.orderBottomSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customerInfoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.customerName {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(45, 46, 48, 0.50);
+    font-family: "Pretendard", sans-serif;  /* 프리텐다드 적용 */
+}
+
+.customerPhoneNumber {
+    font-size: 14px;
+    color: rgba(45, 46, 48, 0.35);
+    font-family: "Pretendard", sans-serif;  /* 프리텐다드 적용 */
+}
+
+.checkbox input {
+    width: 37.2px;
+    height: 37.2px;
+    cursor: pointer;
+}
+
+/* 추가적으로 전체 텍스트에 프리텐다드 폰트를 일괄 적용 */
+body {
+    font-family: "Pretendard", sans-serif;
+}

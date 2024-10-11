@@ -38,25 +38,74 @@
   gap: 16px;
 }
 
-
+.btn-complete-order{
+  padding: 8px 16px;
+  display: flex; /* flexbox로 설정 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  gap: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  background: #FFF;
+  border: 1px solid #EAEBEC;
+  color: #2D2E30;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.9%; /* 22.864px */
+  letter-spacing: 0.232px;
+}
 
 .btn-add-order {
-  background-color: #000;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
+  padding: 8px 16px;
+  display: flex; /* flexbox로 설정 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  gap: 8px;
   cursor: pointer;
+  border-radius: 8px;
+  background: #2D2E30;
+  border: none;
+}
+
+.btn-add-order-text {
+  color: #FFF;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.9%; /* 22.864px */
+  letter-spacing: 0.232px;
+  display: flex; /* flexbox로 설정 */
+  justify-content: center; /* 텍스트 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
 }
 
 .time-group {
   margin-bottom: 40px;
+  padding: 34px 80px;
+}
+
+.titleSection {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  background-color: #ffffff;
+  /* align-items 추가 */
+  align-items: center; /* 수직 중앙 정렬 */
+  padding-bottom: 24px;
+  padding-top: 20px;
 }
 
 .time-group-title {
-  font-size: 24px;
-  margin-bottom: 15px;
-  color: #4a4a4a;
+  font-size: 20px;
+  color: #2d2e30;
+  font-weight: 600;
+  letter-spacing: -0.8px;
+  margin: 0; /* 불필요한 여백 제거 */
 }
 
 .orders-list {
@@ -93,4 +142,9 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
+}
+
+
+body {
+  font-family: "Pretendard", sans-serif;
 }

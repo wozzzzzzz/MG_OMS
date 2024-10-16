@@ -1,0 +1,192 @@
+/* 모달 배경 오버레이 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* 모달 콘텐츠 */
+.modal-content {
+  display: inline-flex;
+  padding: 29.609px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 23.029px;
+  border-radius: 26.475px;
+  border: 1.324px solid rgba(0, 0, 0, 0.20);
+  background: #FFF;
+  
+  width: 922px;
+  /* 높이를 콘텐츠에 맞추도록 설정 */
+  height: auto; 
+  max-width: 90%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+  overflow: visible; /* 스크롤 제거 */
+}
+
+/* 모달 헤더 */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  color: #2D2E30;
+  font-family: Pretendard;
+  font-size: 24.674px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.9%; /* 35.26px */
+  letter-spacing: -0.493px;
+  height: 35px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-subText{
+  color: rgba(164, 166, 171, 0.80);
+  font-family: Pretendard;
+  font-size: 19.739px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.9%; /* 28.208px */
+  letter-spacing: -0.395px;
+}
+
+/* 모달 바디 */
+.modal-body {
+  width: 100%;
+  /* 높이 자동 설정 */
+  height: auto; 
+  max-height: none; /* max-height 제거 */
+  overflow: visible; /* 스크롤 제거 */
+}
+
+.form-group {
+  margin-bottom: 23.03px;
+}
+
+.input-field, .quantity-input, select, textarea {
+  width: 100%;
+  font-size: 1rem;
+
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 20.973px 24.674px;
+  align-items: center;
+  gap: 13.16px;
+  border-radius: 13.16px;
+  border: 1.234px solid #D2D3D7;
+  background: #FAFAFB;
+}
+
+textarea {
+  resize: none;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.quantity-input {
+  width: 50px;
+  margin-left: 10px;
+}
+
+.add-btn, .remove-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.remove-btn {
+  background-color: #dc3545;
+}
+
+/* 모달 푸터 */
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.modal-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.cancel-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+/* 시간 선택 */
+.time-select {
+  display: flex;
+  align-items: center;
+}
+
+.time-select select {
+  width: 50%;
+  margin-right: 5px;
+}
+
+.time-select option {
+  padding: 10px;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.datetime-picker {
+  flex-grow: 1;
+}
+
+.service-type-datetime {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import '../styles/styles.css';
 
 function Sidebar() {
   const [isExpanded, setIsExpanded] = useState(false); // 사이드바 확장 여부 상태

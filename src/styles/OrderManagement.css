@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
-  padding: 34px 80px;
+  padding: 34px 60px 34px 80px;
 }
 
 .div_sticky_h1{
@@ -86,7 +86,7 @@
 
 .time-group {
   margin-bottom: 40px;
-  padding: 34px 80px;
+  padding: 34px 60px 34px 80px;
 }
 
 .titleSection {
